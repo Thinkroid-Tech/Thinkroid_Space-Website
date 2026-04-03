@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Docs — Thinkroid Space</title>
+  <meta name="description" content="Documentation for Thinkroid Space — guides, API reference, and tutorials." />
+  <link rel="canonical" href="https://www.thinkroid.space/docs/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.thinkroid.space/docs/" />
+  <meta property="og:title" content="Docs — Thinkroid Space" />
+  <meta property="og:description" content="Documentation for Thinkroid Space — guides, API reference, and tutorials." />
+  <meta property="og:image" content="https://www.thinkroid.space/assets/og_image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Docs — Thinkroid Space" />
+  <meta name="twitter:description" content="Documentation for Thinkroid Space — guides, API reference, and tutorials." />
+  <meta name="twitter:image" content="https://www.thinkroid.space/assets/og_image.png" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link href="/css/shared.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Thinkroid Space Documentation",
+    "url": "https://www.thinkroid.space/docs/",
+    "description": "Documentation for Thinkroid Space — guides, API reference, and tutorials."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.thinkroid.space/"},
+      {"@type": "ListItem", "position": 2, "name": "Docs", "item": "https://www.thinkroid.space/docs/"}
+    ]
+  }
+  </script>
+  <style>
+    body { min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
+
+    .hero {
+      min-height: 60vh; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; text-align: center;
+      padding: calc(64px + 80px) 0 60px;
+    }
+    .hero-label {
+      font-family: var(--font-mono); font-size: 12px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-light);
+      margin-bottom: 20px;
+    }
+    .hero-product-name {
+      font-family: var(--font-heading); font-size: clamp(20px,2.5vw,28px);
+      font-weight: 700; color: var(--text-tertiary); letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-family: var(--font-heading); font-size: clamp(36px,6vw,64px);
+      font-weight: 900; line-height: 1.1; letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+    .hero-subtitle {
+      font-size: clamp(16px,1.3vw,18px); color: var(--text-secondary);
+      max-width: 520px; line-height: 1.7; margin: 0 auto 32px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+    .docs-empty {
+      text-align: center; padding: 0 0 var(--section-pad);
+      position: relative; z-index: 1;
+    }
+    .docs-empty-text {
+      font-size: 15px; color: var(--text-tertiary);
+    }
+
+    footer { margin-top: auto; padding: 0; }
+    .footer-grid { padding: 56px 0 40px; }
+    .footer-brand .nav-logo { margin-bottom: 12px; }
+    .footer-bottom { padding: 20px 0; }
+    .footer-copyright { font-size: 12px; }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: clamp(28px,8vw,44px); }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+  <nav id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">
+        <div class="nav-logo-icon">
+          <img src="/assets/logo.png" alt="Thinkroid" width="32" height="32" />
+        </div>
+        <span class="nav-logo-text">Thinkroid Space</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="https://www.thinkroid.com/">Thinkroid</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/docs/">Docs</a></li>
+      </ul>
+
+      <span class="btn btn-disabled" style="padding:5px 14px;font-size:12px;">Coming Soon</span>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-mobile" id="mobileNav">
+    <a href="https://www.thinkroid.com/">Thinkroid</a>
+    <a href="/">Home</a>
+    <a href="/docs/" onclick="closeMobile()">Docs</a>
+  </div>
+  </header>
+
+  <main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-label">Documentation</div>
+      <div class="hero-product-name">Thinkroid Space</div>
+      <h1 class="hero-title">Docs</h1>
+      <p class="hero-subtitle">
+        Guides, API references, and tutorials for Thinkroid Space. Coming soon.
+      </p>
+      <div class="hero-actions">
+        <a href="/" class="btn btn-outline">Back to Space</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container docs-empty">
+    <p class="docs-empty-text">Documentation is being written. Stay tuned.</p>
+  </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="nav-logo" href="https://www.thinkroid.com/">
+            <div class="nav-logo-icon">
+              <img src="/assets/logo.png" alt="Thinkroid" width="32" height="32" />
+            </div>
+            <span class="nav-logo-text">Thinkroid</span>
+          </a>
+          <p class="footer-tagline">The orchestration platform where<br>humans and AI agents work together.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Products</div>
+          <ul class="footer-links">
+            <li><a href="/">Thinkroid Space</a></li>
+            <li><a href="https://chatyinput.com" target="_blank" rel="noopener">ChatyInput</a></li>
+            <li><a href="https://www.thinkroid.com/#products">Grid <span class="footer-coming-soon">soon</span></a></li>
+            <li><a href="https://www.thinkroid.com/#products">World <span class="footer-coming-soon">soon</span></a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Resources</div>
+          <ul class="footer-links">
+            <li><a href="https://www.thinkroid.com/blog/">Blog</a></li>
+            <li><a href="https://github.com/Thinkroid-Tech" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <ul class="footer-links">
+            <li><a href="https://www.thinkroid.com/about/">About Us</a></li>
+            <li><a href="https://www.thinkroid.com/contact/">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copyright">&copy; 2026 Thinkroid. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    function closeMobile() { hamburger.classList.remove('open'); mobileNav.classList.remove('open'); }
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) closeMobile();
+    });
+  </script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a4b72c6f0d0b4e45850e27a5e34031b1"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
